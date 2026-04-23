@@ -1,4 +1,4 @@
-# ParkFactor Project
+# Park Factor
 
 Python script that computes baseball park factors from Trackman CSV data using a Baseball-Reference inspired methodology.
 
@@ -76,17 +76,27 @@ This makes it a better fit for serious park factor analysis.
 
 The script writes a CSV file named `parkfactor.csv` containing stadium-level results and intermediate values such as:
 
-- `HomeRuns`
-- `HomeGames`
-- `HomeRPG`
-- `AwayRuns`
-- `AwayGames`
-- `AwayRPG`
-- `iPF`
-- `O_Factor`
-- `ParkFactor_100`
+- `HomeRuns`: Total runs scored by the home team at the stadium.
+- `HomeGames`: Number of home games played at the stadium.
+- `HomeRPG`: Home runs per game.
+- `AwayRuns`: Total runs scored by the home team as the away team.
+- `AwayGames`: Number of away games played by the home team.
+- `AwayRPG`: Away runs per game.
+- `HomePA`: Total plate appearances by the home team at the stadium.
+- `Away_PA`: Total plate appearances by the home team as the away team.
+- `iPF`: Initial park factor (HomeRPG / AwayRPG).
+- `O_Factor`: Average park factor of stadiums visited on the road, used to adjust for schedule strength.
+- `ParkFactor_100`: Final park factor for runs, scaled to 100 (neutral), adjusted for road schedule.
+- `H`: Park factor for hits per plate appearance, adjusted for road schedule.
+- `1b`: Park factor for singles per plate appearance, adjusted for road schedule.
+- `2b`: Park factor for doubles per plate appearance, adjusted for road schedule.
+- `3b`: Park factor for triples per plate appearance, adjusted for road schedule.
+- `HR`: Park factor for home runs per plate appearance, adjusted for road schedule.
+- `BB`: Park factor for walks per plate appearance, adjusted for road schedule.
+- `SO`: Park factor for strikeouts per plate appearance, adjusted for road schedule.
+- `HardHit`: Park factor for hard-hit balls per plate appearance, adjusted for road schedule.
 
-The `O_Factor` column is especially important because it reveals how the team’s road schedule influences the final park factor.
+The `O_Factor` column is especially important because it reveals how the team’s road schedule influences the final park factor. All park factors are scaled to 100 (neutral) and rounded to the nearest integer.
 
 ## How to run
 
