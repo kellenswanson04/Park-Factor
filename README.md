@@ -1,4 +1,4 @@
-# ParkFactor Project
+# Park Factor
 
 Python script that computes baseball park factors from Trackman CSV data using a Baseball-Reference inspired methodology.
 
